@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home || Agung Prasetya</title>
+    <link rel="stylesheet" href="/public/style.css">
+      <style>
+        html {
+            font-size: 62.5%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="">
+                <img src="/public/assets/logo.png" alt="logo" />
+            </a>
+        </div>
+
+
+        <div class="navigasi">
+            <ul>
+                <li>
+                    <a href="/"  style="font-weight: bold; border-bottom: 1px solid white;">Home</a>
+                </li>
+                <li>
+                    <a href="blog">Blog</a>
+                </li>
+                 {{#if isLogin}}
+                
+                <li>
+                    <a href="logout" >Logout</a>
+                </li>
+                <li>
+                    <a href="#">Hallo, {{user.name}}</a>
+                </li>
+                {{else}}
+                <li>
+                    <a href="register" >Register</a>
+                </li>
+                <li>
+                    <a href="login" >Login</a>
+                </li>
+               {{/if}}
+            </ul>
+        </div>
+        <div class="button-contact">
+            <a href="form"> Contact Me </a>
+        </div>
+    </nav>
+
+
+    <!-- Navbar End -->
+
+    <!-- main -->
+    <section class="personal">
+        <div class="kiri">
+            <div class="card">
+                <div class="image">
+                    <img src="/public/assets/my-img.jpg" alt="my image" style="width: 100%;" />
+                </div>
+                <div class="header">
+                    <h1>Agung Prasetya Jati</h1>
+                </div>
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam corporis omnis eum culpa
+                        sunt ex doloribus suscipit atque, praesentium vero.
+                    </p>
+                    <table border="1">
+                        <tr>
+                            <th>Position</th>
+                            <th>Expererience</th>
+                        </tr>
+                        <tr>
+                            <td>Fullstack Developer</td>
+                            <td>2 Years</td>
+                        </tr>
+                    </table>
+                    <div class="skill-list">
+                        <div class="skill-1">
+                            <img src="/public/assets/js.png" width="40px" alt="Javascript Developer">
+                            <h3>Fullstack JS Developer</h3>
+                        </div>
+                        <div class="skill-2">
+                            <img src="/public/assets/clipart4689677.png" width="40px" alt="Graphic Design">
+                            <h3>Graphic Designer & Illustrator</h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kanan">
+            <h1 class="heading-skills">Who Am I ?</h1>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book. It has survived not
+                only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged.
+            </p>
+        </div>
+    </section>
+    <section class="sosmed">
+        <h1>Found Me on</h1>
+        <div class="sosmed-list">
+            <a href="https://wwww.facebook.com/AgungINC"><img src="/public/assets/facebook.png" alt="facebook" /></a>
+            <a href="https://www.instagram.com/agungprasetyaa"><img src="/public/assets/instagram.png" alt="instagram" /></a>
+            <a href="mailto:agungprasetya1121@gmail.com"><img src="/public/assets/mail.png" alt="mail" /></a>
+            <a href="https://wa.me/083895931367"><img src="/public/assets/whatsapp.png" alt="whatsapp" /></a>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

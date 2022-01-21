@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+     <link rel="stylesheet" href="/public/style.css">
+    
+
+</head>
+
+<body>
+    <!-- navbar -->
+   <nav class="navbar">
+        <div class="logo">
+            <a href="">
+                <img src="/public/assets/logo.png" alt="logo" />
+            </a>
+        </div>
+
+
+        <div class="navigasi">
+            <ul>
+                <li>
+                    <a href="/" >Home</a>
+                </li>
+                <li>
+                    <a href="blog">Blog</a>
+                </li>
+               {{#if isLogin}}
+                
+                <li>
+                    <a href="logout" >Logout</a>
+                </li>
+                <li>
+                    <a href="#">Hallo, {{user.name}}</a>
+                </li>
+                {{else}}
+                <li>
+                    <a href="register" >Register</a>
+                </li>
+                <li>
+                    <a href="login" >Login</a>
+                </li>
+               {{/if}}
+            </ul>
+        </div>
+        <div class="button-contact">
+            <a href="form"> Contact Me </a>
+        </div>
+    </nav>
+
+
+    <!-- navbar -->
+
+    <!-- form -->
+    
+    <section class="form-section">
+        <form class="form-container">
+            <div class="form">
+                <label for="namadepan" class="form-label">First Name</label>
+                <input type="text" id="namadepan" name="firstname" placeholder="Your name.." class="form-input">
+            </div>
+
+            <div class="form">
+                <label for="namabelakang" class="form-label">Last Name</label>
+                <input type="text" id="namabelakang" name="lastname" placeholder="Your last name.." class="form-input">
+            </div>
+
+            <div class="form">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" id="email" name="firstname" placeholder="Your email.." class="form-input">
+            </div>
+
+
+            <div class="form">
+                <label for="phonenumber" class="form-label">Phone Number</label>
+                <input type="number" id="phonenumber" name="firstname" placeholder="Your phone number.."
+                    class="form-input">
+            </div>
+
+            <div class="form">
+                <label for="faq" class="form-label">FAQ</label>
+                <select id="faq" class="form-input">
+                    <option>About Payment</option>
+                    <option>About Refund</option>
+                    <option>About Program</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="subject" class="form-label">Subject</label>
+                <textarea id="subject" placeholder="Write something.." class="text-area"></textarea>
+            </div>
+            <div class="cookie">
+                <input type="checkbox" name="cookie" id="cookie" value="cookie">
+                <label for="cookie">Accept All Cookie</label>
+            </div>
+            <div class="agree">
+                <input type="checkbox" name="agree" id="agree" value="term&condition">
+                <label for="agree">Agree Term & Condition</label>
+            </div>
+        </form>
+        <div style="display: flex; justify-content: center; padding-bottom: 100px;">
+            <button class="button-form" onclick="submitButton()">Register</button>
+
+        </div>
+    </section>
+    <!-- form -->
+    <script src="form.js"></script>
+</body>
+
+</html>
